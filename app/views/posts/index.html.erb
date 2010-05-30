@@ -13,13 +13,17 @@
   <tr>
     <td><%= post.title %></td>
     <td><%= post.description %></td>
+
     <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+	<%if user_signed_in?%>
+    	<td><%= link_to 'Edit', edit_post_path(post) %></td>
+    	<td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+	<%end%>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Post', new_post_path %>
+<%if user_signed_in?%>
+	<%= link_to 'New Post', new_post_path %>
+<%end%>

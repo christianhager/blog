@@ -5,7 +5,6 @@ gem 'rails', '3.0.0.beta3', :git => 'git://github.com/rails/rails.git'
 gem "mongoid", :git => 'git://github.com/durran/mongoid.git'
 gem "bson_ext", "1.0.1"
 gem 'devise', :git => 'http://github.com/plataformatec/devise.git', :branch => 'master'
-#gem 'mongo_session_store', :git  => 'git://github.com/nicolaracco/mongo_session_store.git'
 
 
 # # # # cucumber # # # #
@@ -18,5 +17,4 @@ gem 'spork'
 gem 'launchy'    # So you can do Then show me the page
 gem 'machinist_mongo', :require => 'machinist/mongoid'
 
-#gem 'subdomain-fu', '1.0.0.beta2'
 gem "pg", :group => :production
